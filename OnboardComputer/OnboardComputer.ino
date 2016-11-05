@@ -4,15 +4,13 @@
 #include <Wire.h>
 
 SFE_BMP180 pressure;
-SFE_BMP180 pressure;
+double baseline; // baseline pressure
 
 
 void setup()   /*----( SETUP: RUNS ONCE )----*/
 {
   Serial.begin(9600);  // Used to type in characters
 
-  void pressureSetup()
-  {
     if (pressure.begin())
     Serial.println("BMP180 init success");
     else
@@ -25,7 +23,7 @@ void setup()   /*----( SETUP: RUNS ONCE )----*/
     Serial.print("baseline pressure: ");
     Serial.print(baseline);
     Serial.println(" mb");  
-  }
+
   
 
 } 
